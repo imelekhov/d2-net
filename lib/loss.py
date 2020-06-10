@@ -131,6 +131,7 @@ def loss_function(
         has_grad = True
         n_valid_samples += 1
 
+        '''
         if plot and batch['batch_idx'] % batch['log_interval'] == 0:
             pos1_aux = pos1.cpu().numpy()
             pos2_aux = pos2.cpu().numpy()
@@ -179,6 +180,7 @@ def loss_function(
                 idx_in_batch
             ), dpi=300)
             plt.close()
+        '''
 
     if not has_grad:
         raise NoGradientError
